@@ -48,7 +48,16 @@ export class DeseosService {
     id = Number(id)
 
     return this.listas.find(  listaData=> listaData.id === id  );
+
     
+  }
+
+  borrarLista(lista: Lista){
+    this.listas = this.listas.filter(listaData => 
+      listaData !== lista
+      )
+
+      this.saveInfo();
   }
 
 }
