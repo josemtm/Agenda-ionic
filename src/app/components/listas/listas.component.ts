@@ -47,8 +47,8 @@ export class ListasComponent implements OnInit {
       header: 'Editar lista',
       inputs:[{
         name: 'titulo',
-        value: lista.titulo,
         type: 'text',
+        value: lista.titulo,
         placeholder: 'Nombre de la lista'
       }],
       buttons: [{
@@ -74,7 +74,7 @@ export class ListasComponent implements OnInit {
     ]
     });
 
-    await alert.present();
+     alert.present();
   }
 
 
