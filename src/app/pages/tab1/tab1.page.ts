@@ -39,9 +39,12 @@ export class Tab1Page {
           if (data.titulo.length === 0){
             return;
           }
-          else {
-            this.deseosService.CrearLista(data.titulo);    
-          }
+          
+           const ListaId = this.deseosService.CrearLista(data.titulo);    
+          
+           this.router.navigateByUrl(`/tabs/tab1/agregar/${ListaId}`)
+
+          
 
           }
         }
